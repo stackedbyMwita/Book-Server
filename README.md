@@ -33,49 +33,42 @@ Supports creating books via POST requests and retrieving books via GET requests.
 
 1. Clone the repository:
 
-```bash
-git clone <YOUR_GITHUB_REPO_URL>
+```
+git clone https://github.com/stackedbyMwita/Book-Server.git
 cd book_server
+```
 Build the project:
-
-bash
-Copy code
+```
 cargo build
+```
 Run the server:
-
-bash
-Copy code
+```
 cargo run
+```
 Server runs at http://127.0.0.1:8080
 
-Example Requests
-Create a book:
-
-http
-Copy code
-POST /books
-Content-Type: application/json
-
+### Example Requests
+**Create a book:**
+**POST** /books
+**Content-Type:** application/json
+```
 {
   "id": 1,
   "title": "The Rust Book",
   "author": "Steve",
   "year": 2023
 }
-Get all books:
 
-http
-Copy code
-GET /books
-Get a book by ID:
+```
+**Get all books:**
+**GET** /books
+**Get a book by ID:**
 
-http
-Copy code
-GET /books/1
-Notes
-Data is stored in memory (Vec<Book>), so all books are lost when the server stops.
+**GET** /books/1
 
-For persistent storage, you can later integrate a JSON file or a database.
+### Notes
+- Data is stored in memory (Vec<Book>), so all books are lost when the server stops.
+- For persistent storage, you can later integrate a JSON file or a database.
 
-License
-This project is open-source and free to use.
+### License
+- This project is open-source and free to use.
