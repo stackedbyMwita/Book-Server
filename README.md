@@ -47,6 +47,8 @@ cargo run
 ```
 Server runs at http://127.0.0.1:8080
 
+---
+
 ### Example Requests
 **Create a book:**
 **POST** /books
@@ -66,9 +68,8 @@ Server runs at http://127.0.0.1:8080
 
 **GET** /books/1
 
+---
+
 ### Notes
 - Data is stored in memory (Vec<Book>), so all books are lost when the server stops.
 - For persistent storage, you can later integrate a JSON file or a database.
-
-### License
-- This project is open-source and free to use.
